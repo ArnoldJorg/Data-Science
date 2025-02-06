@@ -1,9 +1,20 @@
-#  correlation
-
 import pandas as pd
 
-df = pd.read_csv("./data/exercise_data.csv")
+# Read the CSV file
+df = pd.read_csv("./data/bitcoin_info.csv", sep="\t")
 
-print(df.corr())
+# Drop rows with any missing values
+new_df = df.dropna()
 
-# there is a strong correlation of 0.9 between the calories duration and the calories burned
+# Print the cleaned DataFrame
+print(new_df.to_string())
+
+# Overwrite the original CSV file with the cleaned data
+new_df.to_csv(
+    "./data/bitcoin_info.csv",
+    mode="w",  # 'w' mode overwrites the file
+    header=True,  # Include the header
+    encoding="utf-8",
+    sep="\t",
+    index=False,
+)

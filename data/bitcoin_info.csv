@@ -1,0 +1,37 @@
+	0	1
+0	Official logo from bitcoin.org	Official logo from bitcoin.org
+1	Denominations	Denominations
+2	Plural	Bitcoins
+3	Symbol	₿ (Unicode: U+20BF ₿ BITCOIN SIGN)[1]
+4	Code	BTC
+5	Precision	10−8
+6	Subunits	
+7	1⁄1000	Millibitcoin
+8	1⁄1000000	Microbitcoin
+9	1⁄100000000	Satoshi[a][2]
+10	Development	Development
+11	Original author(s)	Satoshi Nakamoto
+12	White paper	"""Bitcoin: A Peer-to-Peer Electronic Cash System"""
+13	Implementation(s)	Bitcoin Core
+14	Initial release	0.1.0 / 9 January 2009 (16 years ago)
+15	Latest release	28.0 / 4 October 2024 (4 months ago)[3]
+16	Code repository	github.com/bitcoin/bitcoin
+17	Development status	Active
+18	Written in	C++
+19	Source model	Free and open-source software
+20	License	MIT License
+21	Ledger	Ledger
+22	Ledger start	3 January 2009 (16 years ago)
+23	Timestamping scheme	Proof of work (partial hash inversion)
+24	Hash function	SHA-256 (two rounds)
+25	Issuance schedule	Decentralized (block reward) Initially ₿50 per block, halved every 210,000 blocks
+26	Block reward	₿3.125 (as of 2024)
+27	Block time	10 minutes
+28	Circulating supply	₿19,591,231 (as of 6 January 2024)
+29	Supply limit	₿21,000,000[b]
+30	Valuation	Valuation
+31	Exchange rate	Floating
+32	Demographics	Demographics
+33	Official user(s)	El Salvador[4]
+34	Website	Website
+35	Website	bitcoin.org
