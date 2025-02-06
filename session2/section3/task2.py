@@ -1,0 +1,87 @@
+# Choose a different webpage and scrape the images (NOTE: make sure that you choose a website that allows scraping)
+
+import os  # os is a built-in Python library for interacting with the operating system
+
+import requests  # requests is a library for managing requests
+from bs4 import BeautifulSoup
+from PIL import Image
+
+### GETTING ALL IMAGES FROM A PAGE
+URL = "https://en.wikipedia.org/wiki/Ethereum"
+response = requests.get(URL)
+bs_html = BeautifulSoup(response.text, "html.parser")
+# preview the html contents
+print(bs_html.prettify())
+# finds all the
+image_tags = bs_html.find_all("img")
+accepted_image_types = ["jpg", "jpeg", "png", "bmp", "webp", "svg"]
+file_types = []
+
+# get the source 'src' of the image and split it to only leave the file type
+for img_tag in image_tags:
+    file_types.append(str(img_tag.get("src").split(".")[-1]))
+
+
+present_file_types = set(file_types)
+
+img_urls = []
+
+for img_tag in image_tags:
+
+    # if the tag has the 'src' property
+    if img_tag.get("src"):
+
+        # extract it
+        img_src = img_tag.get("src")
+
+        # get the image type (it's the last bit of text after the '.')
+        img_type = img_src.split(".")[-1]
+
+        # skip further steps in the loop for the current image if not in the accepted types
+        if img_type.lower() in accepted_image_types and img_src.startswith("//upload"):
+            img_urls.append(f"https:{img_src}")
+
+
+unique_urls = set(img_urls)
+len(unique_urls)
+# name of the folder where we want to sve the images. CAPITALS suggest it's a constant
+IMAGES_DIRECTORY = "scraped_images_2"
+
+current_dirs = (
+    os.listdir()
+)  # this function lists all the contents of the current folder (where the notebook is)
+current_dirs
+# if the folder where we want to save the images is not already there, create it
+if IMAGES_DIRECTORY not in current_dirs:
+    os.mkdir(
+        IMAGES_DIRECTORY
+    )  # this directory will be created in the same location where your notebook is
+errors = []
+
+requests.adapters.DEFAULT_RETRIES = 10
+
+# the "enumerate" function allows for iteration while also supplying an index for each item
+for img_index, img_url in enumerate(unique_urls):
+
+    # get the data from the image url
+    resp = requests.get(img_url, stream=True)
+
+    # if the request is not completed
+    if resp.status_code != 200:
+        # add the image url to the errors list
+        errors.append(img_url)
+
+    # otherwise, proceed
+    else:
+        # create a PIL.Image object
+        obj_img = Image.open(resp.raw)
+        # get the file extension from the url
+        img_type = img_url.split(".")[-1]
+        # save the image in its origial extension
+        obj_img.save(f"./{IMAGES_DIRECTORY}/img_{img_index}.{img_type}")
+# how many errors?
+len(errors)
+# let's see what's happened here!
+errors[0]
+resp = requests.get(errors[0], stream=True)
+resp.status_code  # 403 is the status code for "Permission denied"

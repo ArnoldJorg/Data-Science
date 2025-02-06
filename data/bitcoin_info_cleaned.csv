@@ -1,0 +1,29 @@
+Attribute	Value
+Plural	Bitcoins
+Symbol	₿(Unicode:U+20BF₿BITCOIN SIGN)[1]
+Code	BTC
+Precision	10−8
+1⁄1000	Millibitcoin
+1⁄1000000	Microbitcoin
+1⁄100000000	Satoshi[a][2]
+Original author(s)	Satoshi Nakamoto
+White paper	"""Bitcoin: A Peer-to-Peer Electronic Cash System"""
+Implementation(s)	Bitcoin Core
+Initial release	0.1.0 / 9 January 2009(16 years ago)(2009-01-09)
+Latest release	28.0 / 4 October 2024(4 months ago)(2024-10-04)[3]
+Code repository	github.com/bitcoin/bitcoin
+Development status	Active
+Written in	C++
+Source model	Free and open-source software
+License	MIT License
+Ledger start	3 January 2009(16 years ago)(2009-01-03)
+Timestamping scheme	Proof of work(partial hash inversion)
+Hash function	SHA-256(two rounds)
+Issuance schedule	Decentralized (block reward)Initially ₿50 per block, halved every 210,000 blocks
+Block reward	₿3.125 (as of 2024[update])
+Block time	10 minutes
+Circulating supply	₿19,591,231 (as of 6 January 2024[update])
+Supply limit	₿21,000,000[b]
+Exchange rate	Floating
+Official user(s)	El Salvador[4]
+Website	bitcoin.org
