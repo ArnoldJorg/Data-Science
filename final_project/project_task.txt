@@ -1,0 +1,5 @@
+- visualise, analyse and describe a selected dataset found online,
+- create your own dataset using web scraping techniques or a selected web API and describe it.
+- manually create a dataset and present insights into it using Python programming techniques.
+- it may (but does not have to) refer to one of themes of the Southwark Economic Strategy 2023-30 (https://www.southwark.gov.uk/business/southwark-economic-strategy),
+- another topic that allows you to demonstrate the skills listed in this Final Project Brief.

@@ -28,14 +28,14 @@ print(fire_spots_sorted)
 
 # this is also working so I now need to plot this.
 
-plt.figure(figsize=(10, 5))
+plt.figure(figsize=(12, 6))
 
-plt.plot(fire_spots_sorted.index, fire_spots_sorted.values, marker="o", color="orange")
+plt.bar(fire_spots_sorted.index, fire_spots_sorted["firespots"], color="orange")
 
 plt.title("amount of firespots per state")
 
 plt.xlabel("state")
 plt.ylabel("Number of Firespots")
 plt.grid(True)
-plt.xticks(fire_spots_sorted.index)
+# plt.xticks(rotation=90)
 plt.show()
