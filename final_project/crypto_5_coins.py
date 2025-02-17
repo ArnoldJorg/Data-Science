@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import requests
 
-# In my tinkering file I realised that it isn't optimised. I had to copy and past a lot of code while only changing small parts which was very inefficient.
-# I also realised that I would have to append each price and market cap into a new array which would lead into more code repetition.
 coins = ["bitcoin", "ethereum", "binancecoin", "ripple", "solana"]
 
 base_url = "https://api.coingecko.com/api/v3/coins/"
