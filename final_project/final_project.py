@@ -25,20 +25,12 @@ print(df.isnull().sum())
 s = df.duplicated()
 print(s)
 
-#  there are no duplicates (all false)
-
 print(df.describe())
-
 
 plt.figure(figsize=(12, 6))
 
-# need to find the cumalative frequency - open - closing time  - then have a line graph for highs and one for lows
-
 plt.plot(df["timeOpen"], df["high"], label="high prices", color="green")
 plt.plot(df["timeOpen"], df["low"], label="low prices", color="red")
-
-# plt.plot(fire_spots_sorted.index, fire_spots_sorted["firespots"].cumsum(), label="Cumulative Firespots", color="blue")
-
 
 plt.title("bitcoin price USD 2024-2025 (highs & lows)")
 plt.xlabel("Date / Time")
